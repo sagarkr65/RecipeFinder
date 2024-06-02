@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Chef's Login</h1>
+        <form id="signin" action="submit_signup.php" method="post">
+            
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            
+            <a href="signup.html"><p>Did'nt have an account?</p></a>
+        </form>
+    </div>
+    <script type="module" >
+       // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+const firebaseConfig = {
+  // Your Firebase project configuration
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Get the login form elements
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const signinForm = document.getElementById('signin');
+
+// Event listener for form submission
+signinForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Sign in with email and password
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Successful login
+      console.log('User signed in successfully.');
+      // Redirect or perform other actions after successful login
+    })
+    .catch((error) => {
+      console.error('Error signing in:', error);
+      // Handle error based on error code and message
+      if (error.code === 'auth/wrong-password') {
+        alert('Incorrect password.');
+      } else if (error.code === 'auth/user-not-found') {
+        alert('User not found.');
+      } else {
+        alert('An error occurred. Please try again later.');
+      }
+    });
+});
+    
+        signin.addEventListener('submit', SignInUser);
+    </script>
+</body>
+</html>

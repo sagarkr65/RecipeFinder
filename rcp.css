@@ -1,0 +1,341 @@
+
+/* styles.css */
+*{
+    background-color: rgb(0, 0, 0);
+    color:#ffffff;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+p{
+    
+    font-size: 20px;
+}
+h1{
+   
+    font-size: 30px;
+    padding: 0 0;
+}
+#rlogo{
+  height: 90px;
+  width: 90px;
+  background: black;
+  border-radius: 50% ;
+  scale:0.7;
+
+}
+#caption h2{
+  font-size: 40px;
+  font-family: palatino serif;
+  white-space: nowrap;
+  color: #ffffff;
+  overflow: hidden;
+  animation: 
+  typing 4s steps(80, start),
+  blink-caret .75s step-start infinite;
+  background-image: url("capbg.jpg");
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+#nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0%;
+}
+#nav1{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#nav2 li{
+  display:inline-block;
+  margin: 0 10px;
+
+}
+#lbtn{
+  border-radius: 20px;
+  background-color: burlywood;
+  border: 1px #dcecd5;
+}
+
+h2{
+    
+    font-size: 25px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding:0;
+}
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #dcecd5;
+    font-style:oblique;
+    color: rgb(0, 0, 0);
+}
+button {
+    padding: 10px 20px;
+    background-color: #dfc5c3;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+button:future{
+  background-color: black;
+  color: antiquewhite;
+}
+#faltu img{
+  position: absolute;
+  height:100px;
+  width: 100px;
+  border-radius: 50%;
+  bottom: 300px;
+  right: 700px;
+}
+#pg2{
+    height:80vh;
+    width:100%;
+}
+#pg3{
+    height:100vh;
+    width:100%;   
+}
+
+#rcp1{
+    border-radius: 50%;
+}
+
+.meal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.meal-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    color:#ccc;
+}
+
+.meal-item img {
+    width: 100%;
+    height: auto;
+}
+
+.meal-name {
+    padding: 10px;
+    text-align: center;
+}
+#p1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom: 60px ;
+}
+#pg2{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    padding-bottom: 80px;
+}
+#p22{
+    display: inline-block;
+}
+#p23{
+    height: 100px;
+    width: 100px;
+}
+#pg3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+#pg33{
+  padding-bottom: 0;
+}
+.wrappernews {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrappernews i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrappernews i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrappernews i:first-child{
+    left: -22px;
+  }
+  .wrappernews i:last-child{
+    right: -22px;
+  }
+  .wrappernews .carouselnews{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carouselnews::-webkit-scrollbar {
+    display: none;
+  }
+  .carouselnews.no-transition {
+    scroll-behavior: auto;
+  }
+  .carouselnews.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carouselnews.dragging .cardnews {
+    cursor: grab;
+    user-select: none;
+  }
+  .carouselnews :where(.cardnews, .imgnews) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carouselnews .cardnews {
+    scroll-snap-align: start;
+    height: 300px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carouselnews .cardnews .imgnews {
+    background: #ffffff;
+    height: 140px;
+    width: 148px;
+    border-radius: 20px;
+  }
+  .cardnews .imgnews img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  
+  
+  @media screen and (max-width: 900px) {
+    .wrappernews .carouselnews {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrappernews .carouselnews {
+      grid-auto-columns: 100%;
+    }
+  }
+  #pg33{
+    padding: 0 20px;
+  }
+  #pg4{
+    overflow: hidden;
+    padding-bottom: 80px;
+  }
+
+  #pg45{
+    height:700px;
+    width: 50%;
+    opacity: 0.3;
+  }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #c2e7b5;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 20px;
+    
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer {
+    background-image: url('path/to/food-emoji-pattern.png');
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.7;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+    color: #666;
+  }

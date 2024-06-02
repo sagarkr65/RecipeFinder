@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="loco.css">
+    <link rel="stylesheet" href="rcp.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+</head>
+<body>
+  <div id="faltu"><img src="recipe.avif" ></div>
+  <div id="main">
+  <div id="pg1"><div id="navi">
+  <div id="nav"><div id="nav1"><img id="rlogo" src="logor.png" alt=""><h2>Kitchen King</h2></div>
+ <div id="nav2">
+    <ul>
+      <li id="hm">HOME</li>
+      <li id="abt">ABOUT US</li>
+      <li>
+        <button id="lbtn"><a href="">Login/Signup</a> </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<center><div id="caption"><h2>Be Your Own Chef</h2></div></center>
+
+    <div class="container">
+        <input type="text" id="search-input" placeholder="Search for a recipe...">
+        <button id="search-btn">Search</button>
+        <div id="meal-list" class="meal-list"></div>
+        <div id="p1">   <div id="intro"><h2>Welcome to Kitchen King, your ultimate destination for finding mouthwatering recipes to satisfy your culinary cravings. Whether you're a seasoned chef or a novice in the kitchen, our intuitive recipe finder makes it effortless to discover and create delectable dishes that will impress your family and friends.</h2></div>  <div id="imgc"><img src="Cooking (2).gif" alt="" height="500vw"></div></div>
+    </div>
+  
+  </div>
+    <div id="pg2">
+       <div id="pg22"> <h1>Explore a World of Culinary Delights:</h1>
+<p>With our extensive database of recipes from around the globe, you'll never run out of inspiration for your next meal.<br> 
+    From classic comfort foods to exotic cuisines, we've got something to tantalize every taste bud. Simply enter your ingredients,<br>
+     dietary preferences, or cuisine preferences, and let our recipe finder do the rest.</p></div>
+<div id="pg23"><img id="rcp1" src="culi.gif"> </div>
+    </div>
+    <div id="pg3">
+        <div id="pg33"> <div class="wrappernews">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carouselnews">
+              <li class="cardnews">
+                <div class="imgnews"><img src="carousal.gif" alt="img" draggable="false"></div>
+              </li>
+              <li class="cardnews">
+                <div class="imgnews"><img src="c2.gif" alt="img" draggable="false"></div>
+                
+              </li>
+              <li class="cardnews">
+                <div class="imgnews"><img src="c3.gif" alt="img" draggable="false"></div>
+               
+              </li>
+              <li class="cardnews">
+                <div class="imgnews"><img src="c4.gif" alt="img" draggable="false"></div>
+               
+              </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+          </div>
+          
+      </div>
+        <div id="pg33"><h1>personalized Recommendation:<br></h1><p>Get personalized recipe recommendations tailored to your unique preferences and dietary requirements. 
+         <br>   Whether you're vegetarian, vegan, gluten-free, or following a specific diet plan, we have a wide range of recipes to suit your needs.
+            <br> Our smart algorithm learns from your interactions to provide you with the most relevant and delicious recipes every time.</p></div>
+       
+    </div>
+    <div id="pg4">
+        <div id="pg44"><h1>Easy To Follow Instruction</h1><p>Cooking should be a joy, not a chore. That's why each recipe on our platform comes with clear, 
+            <br>step-by-step instructions, accompanied by mouthwatering photos to guide you through the cooking process. <br>
+            Whether you're a beginner or an experienced chef, you'll find our recipes easy to follow and rewarding to recreate in your own kitchen.</p></div>
+        <div id="pg45"><img src="pg4img.gif" > </div>
+    </div>
+    <div id="pg5">
+        <div id="pg55"><h1>Start your culinary Adventure Today</h1><br>
+        <p>Ready to embark on a culinary adventure? Sign up for free and start exploring our vast collection of recipes.
+            <br> Whether you're cooking for one, hosting a dinner party, or looking for family-friendly meals, 
+            <br>Kitchen King has everything you need to unleash your inner chef. Join us and elevate your cooking game to new heights!</p></div>
+        <div id="pg55"></div>
+    </div>
+
+
+    <!-- Modal for displaying recipe details -->
+    <div id="meal-details-modal" class="modal">
+        <div class="modal-content" id="meal-details-content">
+            <span class="close-btn">&times;</span>
+            <div id="recipe-details"></div>
+        </div>
+    </div>
+    <footer style="background-image: url('path/to/food-emoji-pattern.png'); background-repeat: repeat; background-size: 20px 20px; opacity: 0.7;"> <div class="content"> <h2 style="text-align: center; font-family: 'Arial Black', sans-serif;">Kitchen King - Where Every Meal is a Royal Feast</h2> </div> <div style="border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #f2cccc; padding: 10px;"> <p class="copyright">&copy; 2023 Kitchen King</p> </div> </footer></div>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="rcp.js"></script> </div>
+</body>
+</html>
